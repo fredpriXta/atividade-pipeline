@@ -1,7 +1,20 @@
-import pandas as pd  
-import matplotlib.pyplot as plt  
+# gerar_grafico.py
+import matplotlib.pyplot as plt
 
-df = pd.read_csv('data.csv')  
-df['idade'].plot(kind='hist')  
-plt.title('Distribuição de Idades')  
-plt.savefig('grafico.png')  
+print("Gerando gráfico...")
+
+# Dados fictícios
+x = [1, 2, 3, 4, 5]
+y = [10, 15, 13, 18, 20]
+
+plt.figure(figsize=(8, 4))
+plt.plot(x, y, marker='o', linestyle='-', color='b', label='Valores')
+plt.title("Exemplo de Gráfico")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
+plt.grid(True)
+
+# Salva o gráfico como imagem PNG
+plt.savefig("grafico.png")
+print("Gráfico salvo como grafico.png")
